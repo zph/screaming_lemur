@@ -1,0 +1,7 @@
+---
+:base_url: 'http://local.m.example.com'
+:secondary_urls:
+- :url: '/apartments/Georgia/Atlanta/'
+  :assertions:
+  - :canonical_link: 'http://local.example.com/apartments/Georgia/Atlanta/'
+  - :status: 200
