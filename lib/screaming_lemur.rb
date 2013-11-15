@@ -7,7 +7,7 @@ module ScreamingLemur
     attr_accessor :conn
     def initialize(url = 'http://local.m.apartmentguide.com')
       @conn = Faraday.new(url: url) do |f|
-        f.response :logger
+        # f.response :logger
         f.adapter  Faraday.default_adapter
       end
     end
@@ -24,6 +24,11 @@ module ScreamingLemur
       @filename = File.expand_path(config)
       @config = YAML.load_file(@filename)
       run
+      exit(set_exit_status)
+    end
+
+    def set_exit_status
+      @exit_status ||= 0
     end
 
     def run
@@ -31,7 +36,9 @@ module ScreamingLemur
         @teacher = Teacher.new(url_base: config[:base_url], url_end: request[:url])
         request[:assertions].each do |assert|
           assert.each do |test, expectation|
-            @teacher.send(test, expectation)
+            unless @teacher.send(test, expectation)
+              @exit_status = 9
+            end
           end
         end
       end
@@ -40,7 +47,7 @@ module ScreamingLemur
 
   class Teacher
     attr_accessor :response, :full_url
-    def initialize(url_base: 'http://local.m.apartmentguide.com', url_end: '/apartments/Atlanta/Georgia/')
+    def initialize(url_base: :error_missing_url_base, url_end: :error_missing_end_url)
       @monk = Monkey.new(url_base)
       @response = @monk.get("#{url_end}")
       @full_url = url_base + url_end

@@ -5,3 +5,7 @@
   :assertions:
   - :canonical_link: 'http://local.example.com/apartments/Georgia/Atlanta/'
   - :status: 200
+- :url: '/apartments/Georgia/Atlanta/'
+  :assertions:
+  - :canonical_link: 'http://local.example.com/apartments/Georgia/Atlanta/'
+  - :status: 200

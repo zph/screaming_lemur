@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'screaming_lemur'
+
+ScreamingLemur::Automata.new("config.yml")
