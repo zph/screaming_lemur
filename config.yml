@@ -1,0 +1,101 @@
+---
+- :base_url: 'http://www.apartmentguide.com'
+  :secondary_urls:
+  - :url: '/apartments/Alaska/Yakutat/55+-Restricted-Ashley-Park-Retirement-Community/184402/'
+    :assertions:
+    - :peel_ad_id: '#page_peel'
+- :base_url: 'http://m.apartmentguide.com'
+  :secondary_urls:
+  - :url: '/apartments/Alaska/Yakutat/EGG-Property-Three/185299/'
+    :assertions:
+    - :call_phone_number_count:
+        :css_class: '.button_phone_number'
+        :count: 1
+  - :url: '/apartments/Alaska/Yakutat/EGG-Property-Three/185299/'
+    :assertions:
+    - :call_phone_number: '.button_phone_number'
+  - :url: '/apartments/Alaska/Yakutat/EGG-Property-Three/185299/'
+    :assertions:
+    - :assert_link:
+        :text: 'Check Availability'
+  - :url: '/apartments/Georgia/Atlanta/'
+    :assertions:
+    - :canonical_link: 'http://local.apartmentguide.com/apartments/Georgia/Atlanta/'
+    - :status: 200
+
+- :base_url: 'http://m.apartmentguide.com'
+  :secondary_urls:
+  - :url: /apartments/Georgia/Atlanta/0-beds-1z141wj/
+    :assertions:
+    - :status: 200
+  - :url: /apartments/Georgia/Atlanta/1-beds-1z141xt/
+    :assertions:
+    - :status: 200
+  - :url: /apartments/Georgia/Atlanta/2-beds-1z141y8/
+    :assertions:
+    - :status: 200
+  - :url: /apartments/Georgia/Atlanta/loft-layout-4ku/
+    :assertions:
+    - :status: 200
+  - :url: /apartments/Georgia/Atlanta/10-miles/
+    :assertions:
+    - :status: 200
+  - :url: /apartments/Georgia/Atlanta/20-miles/
+    :assertions:
+    - :status: 200
+  - :url: /apartments/Georgia/Atlanta/cheap-apartments-for-rent-4la/
+    :assertions:
+    - :status: 200
+  - :url: /apartments/Georgia/Atlanta/luxury-apartments-for-rent-4l9/
+    :assertions:
+    - :status: 200
+  - :url: /apartments/Georgia/Atlanta/income-restricted-4lg/
+    :assertions:
+    - :status: 200
+  - :url: /apartments/Georgia/Atlanta/pet-friendly-4lh/
+    :assertions:
+    - :status: 200
+  - :url: /apartments/Georgia/Atlanta/senior-living-4lf/
+    :assertions:
+    - :status: 200
+  - :url: /apartments/Georgia/Atlanta/corporate-4lc/
+    :assertions:
+    - :status: 200
+  - :url: /military/Georgia/
+    :assertions:
+    - :status: 200
+  - :url: /college/Georgia/
+    :assertions:
+    - :status: 200
+  - :url: /apartments/Georgia/Atlanta/short-term-apartments-4id/
+    :assertions:
+    - :status: 200
+  - :url: /apartments/Georgia/Atlanta/furnished-available-4ic/
+    :assertions:
+    - :status: 200
+  - :url: /apartments/New-Jersey/Clifton/500-700-price-range-1-baths-4jk+1z141xu/
+    :assertions:
+    - :status: 200
+    - :meta_robots:
+      - "NOINDEX"
+      - "NOFOLLOW"
+  - :url: /apartments/Georgia/Atlanta/4-beds-pets-1z141to+4ib/
+    :assertions:
+    - :status: 200
+    - :meta_robots:
+      - "NOINDEX"
+      - "NOFOLLOW"
+  - :url: '/apartments/Georgia/Atlanta/'
+    :assertions:
+    - :canonical_link: 'http://www.apartmentguide.com/apartments/Georgia/Atlanta/'
+    - :status: 200
+  - :url: '/ops/version.json'
+    :assertions:
+      # how to place nil, simply place no value
+    - :ops_page_geo_url:
+- :base_url: 'http://m.qa.apartmentguide.com'
+  :secondary_urls:
+  - :url: '/ops/version.json'
+    :assertions:
+      # how to place nil, simply place no value
+    - :ops_page_geo_url: foo

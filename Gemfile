@@ -4,5 +4,10 @@ source 'https://rubygems.org'
 gem 'faraday'
 gem 'pry-full'
 gem 'mechanize'
-gem 'minitest'
+gem 'watir-webdriver'
+gem 'nokogiri'
+gem 'headless'
+gem 'highline'
+
+gem 'rspec'
 gemspec

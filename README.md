@@ -1,24 +1,12 @@
 # ScreamingLemur
 
-TODO: Write a gem description
+Assert conditions of website, think external Capybara or ScreamingFrog.
 
-## Installation
+## Hasty Usage Instructions
 
-Add this line to your application's Gemfile:
+Clone it, move into that folder, `bundle install`, then run:
 
-    gem 'screaming_lemur'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install screaming_lemur
-
-## Usage
-
-TODO: Write usage instructions here
+`DEBUG=true bundle exec bin/barrage_site`
 
 ## Contributing
 

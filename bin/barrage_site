@@ -2,4 +2,4 @@
 
 require 'screaming_lemur'
 
-ScreamingLemur::Automata.new("config.yml")
+ScreamingLemur::Automata.stampede("config.yml")
